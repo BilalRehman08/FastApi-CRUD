@@ -65,3 +65,9 @@ def add_item_through_request_body_as_dictionary(body=Body()):
 def update_task(id: int, item: schemas.Item):
     fakeDatabase[id]['task'] = item.task
     return fakeDatabase
+
+
+@app.delete("/{id}")
+def delete_record(id: int):
+    del fakeDatabase[id]
+    return fakeDatabase
