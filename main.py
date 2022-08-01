@@ -66,6 +66,10 @@ def update_task(id: int, item: schemas.Item):
     fakeDatabase[id]['task'] = item.task
     return fakeDatabase
 
+# ==================================== DELETE ====================================
+
+# deleting record using id
+
 
 @app.delete("/{id}")
 def delete_record(id: int):
